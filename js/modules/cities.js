@@ -5,42 +5,40 @@ export function setupCities() {
   // Cities data - contains information about major US cities
   const citiesData = [
     {
-      name: "New York City",
-      image: "https://images.pexels.com/photos/1486222/pexels-photo-1486222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      description: "Experience the vibrant energy of the Big Apple with its iconic skyline, Broadway shows, and diverse neighborhoods.",
-      highlights: ["Statue of Liberty", "Central Park", "Times Square", "Broadway"]
+      name: "Nueva York",
+      image: "../images/nuevayork.jpeg",
+      description: "Experimenta la vibrante energía de la Gran Manzana con su icónico horizonte, espectáculos de Broadway y diversos vecindarios.",
+      highlights: ["Estatua de la Libertad", "Central Park", "Times Square", "Broadway"]
     },
     {
       name: "San Francisco",
-      image: "https://images.pexels.com/photos/208745/pexels-photo-208745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      description: "Discover the charm of the Bay Area with its hills, cable cars, and the magnificent Golden Gate Bridge.",
-      highlights: ["Golden Gate Bridge", "Alcatraz Island", "Fisherman's Wharf", "Chinatown"]
+      image: "../images/sanfrancisco.jpeg",
+      description: "Descubre el encanto de la Bahía con sus colinas, tranvías y el magnífico Puente Golden Gate.",
+      highlights: ["Puente Golden Gate", "Isla Alcatraz", "Fisherman's Wharf", "Barrio Chino"]
     },
     {
-      name: "Los Angeles",
-      image: "https://images.pexels.com/photos/1388030/pexels-photo-1388030.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      description: "Explore the entertainment capital with Hollywood, beautiful beaches, and vibrant cultural scenes.",
-      highlights: ["Hollywood Sign", "Venice Beach", "Universal Studios", "Beverly Hills"]
+      name: "Los Ángeles",
+      image: "../images/losangeles.jpeg",
+      description: "Explora la capital del entretenimiento con Hollywood, hermosas playas y vibrantes escenas culturales.",
+      highlights: ["Letrero de Hollywood", "Playa Venice", "Universal Studios", "Beverly Hills"]
     },
     {
       name: "Chicago",
-      // image: "https://images.pexels.com/photos/2148516/pexels-photo-2148516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      // image: "https://images.pexels.com/photos/1823681/pexels-photo-1823681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       image: "../images/chicago.jpeg",
-      description: "Visit the Windy City with its stunning architecture, deep-dish pizza, and lakefront attractions.",
-      highlights: ["Millennium Park", "Navy Pier", "Art Institute", "Willis Tower"]
+      description: "Visita la Ciudad de los Vientos con su impresionante arquitectura, pizza estilo Chicago y atracciones junto al lago.",
+      highlights: ["Millennium Park", "Navy Pier", "Instituto de Arte", "Torre Willis"]
     },
     {
       name: "Miami",
-      image: "https://images.pexels.com/photos/378570/pexels-photo-378570.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      description: "Enjoy the tropical paradise with pristine beaches, vibrant nightlife, and unique cultural blend.",
-      highlights: ["South Beach", "Art Deco District", "Little Havana", "Everglades"]
+      image: "../images/miami.jpeg",
+      description: "Disfruta del paraíso tropical con playas prístinas, vida nocturna vibrante y única mezcla cultural.",
+      highlights: ["South Beach", "Distrito Art Deco", "Pequeña Habana", "Everglades"]
     },
     {
       name: "Las Vegas",
-      image: "https://images.pexels.com/photos/415999/pexels-photo-415999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      description: "Experience the Entertainment Capital of the World with its spectacular shows and luxurious resorts.",
-      highlights: ["The Strip", "Fremont Street", "Grand Canyon Tours", "World-class Shows"]
+      image: "../images/lasvegas.jpeg",
+      description: "Experimenta la Capital Mundial del Entretenimiento con sus espectaculares shows y lujosos resorts.",
+      highlights: ["The Strip", "Calle Fremont", "Tours al Gran Cañón", "Shows de Clase Mundial"]
     }
   ];
 

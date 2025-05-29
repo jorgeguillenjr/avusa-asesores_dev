@@ -1,8 +1,8 @@
 /* Base Styles */
 :root {
-  --primary-color: #0A2463;
-  --secondary-color: #FFC857;
-  --accent-color: #D72638;
+  --primary-color: #0A3161;
+  --secondary-color: #B31942;
+  --accent-color: #FFFFFF;
   --dark-color: #1E1B18;
   --light-color: #F8F8F8;
   --white: #FFFFFF;
@@ -108,7 +108,7 @@ a {
 }
 
 a:hover {
-  color: var(--accent-color);
+  color: var(--secondary-color);
 }
 
 ul {
@@ -141,11 +141,11 @@ ul {
 
 .btn-secondary {
   background-color: var(--secondary-color);
-  color: var(--gray-900);
+  color: var(--white);
 }
 
 .btn-secondary:hover {
-  background-color: #e6b54e;
+  background-color: #8B1432;
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -217,7 +217,7 @@ ul {
 }
 
 .back-to-top:hover {
-  background-color: var(--accent-color);
+  background-color: var(--secondary-color);
   transform: translateY(-4px);
 }
 
