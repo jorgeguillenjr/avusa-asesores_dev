@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VisaPath USA - Expert US Visa Advisory Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/cities.css">
+    <link rel="stylesheet" href="./css/services.css">
+    <link rel="stylesheet" href="./css/testimonials.css">
+    <link rel="stylesheet" href="./css/consultation.css">
+    <link rel="stylesheet" href="./css/faq.css">
+    <link rel="stylesheet" href="./css/footer.css">
+  </head>
+  <body>
+    <header id="header">
+      <div class="container">
+        <div class="logo">
+          <span class="logo-text">VisaPath<span class="logo-highlight">USA</span></span>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#cities">Destinations</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#consultation" class="btn btn-outline">Contact Us</a></li>
+          </ul>
+          <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section id="hero">
+      <div class="hero-content">
+        <h1>Your Journey to America <span>Starts Here</span></h1>
+        <p>Expert guidance for navigating the US visa process with confidence</p>
+        <div class="hero-cta">
+          <a href="#consultation" class="btn btn-primary">Book a Consultation</a>
+          <a href="#services" class="btn btn-secondary">Our Services</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">98%</span>
+            <span class="stat-text">Success Rate</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">5000+</span>
+            <span class="stat-text">Happy Clients</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">10+</span>
+            <span class="stat-text">Years Experience</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Visa Services</h2>
+          <p>Comprehensive support for your American dream</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card" data-aos="fade-up">
+            <div class="service-icon">
+              <i class="fas fa-plane"></i>
+            </div>
+            <h3>Tourist Visas</h3>
+            <p>Expert guidance for B-1/B-2 visitor visas to explore America's iconic destinations.</p>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>Student Visas</h3>
+            <p>Navigate F-1 and M-1 visa applications for studies at America's prestigious institutions.</p>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <h3>Work Visas</h3>
+            <p>Specialized assistance for H-1B, L-1, and other employment-based visa categories.</p>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>Family Visas</h3>
+            <p>Reunite with loved ones through K-1 fiancé(e) visas and family-sponsored immigration.</p>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-icon">
+              <i class="fas fa-file-signature"></i>
+            </div>
+            <h3>Document Preparation</h3>
+            <p>Professional assistance with application forms and supporting documentation.</p>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h3>Interview Coaching</h3>
+            <p>Personalized preparation for visa interviews with mock sessions and expert tips.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cities">
+      <div class="container">
+        <div class="section-header">
+          <h2>Discover America</h2>
+          <p>Explore the iconic cities awaiting your visit</p>
+        </div>
+        <div class="cities-slider">
+          <div class="slider-controls">
+            <button id="prev-city" class="slider-arrow"><i class="fas fa-chevron-left"></i></button>
+            <button id="next-city" class="slider-arrow"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          <div class="cities-slider-container">
+            <div class="city-slide" id="city-slide-container">
+              <!-- City slides will be added dynamically from JavaScript -->
+            </div>
+          </div>
+          <div class="slider-indicators" id="slider-indicators">
+            <!-- Indicators will be added dynamically -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Simple Process</h2>
+          <p>We make the visa application journey clear and straightforward</p>
+        </div>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3>Initial Consultation</h3>
+            <p>Schedule a personalized assessment to understand your visa needs and options.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3>Documentation</h3>
+            <p>We guide you through preparing and organizing all required documents.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3>Application Filing</h3>
+            <p>Our experts review and submit your application with precision and care.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3>Interview Preparation</h3>
+            <p>Comprehensive coaching to help you confidently navigate the visa interview.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">5</div>
+            <h3>Visa Approval</h3>
+            <p>We're with you until your visa is approved and your American journey begins.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>Success Stories</h2>
+          <p>Hear from our satisfied clients</p>
+        </div>
+        <div class="testimonials-container">
+          <div class="testimonial-card active">
+            <div class="testimonial-content">
+              <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+              <p>Thanks to VisaPathUSA, my tourist visa was approved on the first attempt. Their interview preparation was invaluable!</p>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4>Maria Rodriguez</h4>
+                  <p>Tourist Visa • Mexico</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+              <p>The team guided me through every step of my student visa application. Now I'm studying at my dream university in Boston!</p>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4>Ahmed Hassan</h4>
+                  <p>Student Visa • Egypt</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+              <p>After two failed attempts on my own, I found VisaPathUSA. Their expertise made all the difference for my work visa approval.</p>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4>Priya Sharma</h4>
+                  <p>H-1B Work Visa • India</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="testimonial-dot active" data-index="0"></button>
+          <button class="testimonial-dot" data-index="1"></button>
+          <button class="testimonial-dot" data-index="2"></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+          <p>Common questions about the US visa process</p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What documents are required for a US tourist visa?</h3>
+              <span class="faq-icon"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>For a B-1/B-2 tourist visa, you typically need a valid passport, DS-160 confirmation page, application fee payment receipt, photo, travel itinerary, proof of financial support, and evidence of ties to your home country. Our advisors can provide a personalized checklist based on your specific situation.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How long does the visa application process take?</h3>
+              <span class="faq-icon"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>Processing times vary by visa type and current demand. Generally, you should plan for 3-5 weeks from submission to decision, though some cases may take longer. Work and specialized visas often require additional processing time. We recommend applying at least 3 months before your intended travel date.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What increases my chances of visa approval?</h3>
+              <span class="faq-icon"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>Strong ties to your home country, clear travel purpose, sufficient financial resources, and honest, consistent information across all documents and interviews significantly improve approval chances. Our advisors focus on strengthening these aspects of your application.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Can you guarantee my visa will be approved?</h3>
+              <span class="faq-icon"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>No legitimate visa service can guarantee approval, as the final decision rests with US consular officers. However, our 98% success rate demonstrates our expertise in preparing strong applications and properly equipping clients for interviews. We focus on maximizing your approval chances through meticulous preparation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="consultation">
+      <div class="container">
+        <div class="consultation-container">
+          <div class="consultation-content">
+            <h2>Start Your American Journey Today</h2>
+            <p>Schedule a consultation with our visa experts to discuss your options</p>
+            <ul class="consultation-benefits">
+              <li><i class="fas fa-check-circle"></i> Personalized visa strategy</li>
+              <li><i class="fas fa-check-circle"></i> Document review and guidance</li>
+              <li><i class="fas fa-check-circle"></i> Interview preparation</li>
+              <li><i class="fas fa-check-circle"></i> 24/7 application support</li>
+            </ul>
+          </div>
+          <div class="consultation-form">
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+              </div>
+              <div class="form-group">
+                <label for="visa-type">Visa Type</label>
+                <select id="visa-type" required>
+                  <option value="" disabled selected>Select visa type</option>
+                  <option value="tourist">Tourist Visa (B-1/B-2)</option>
+                  <option value="student">Student Visa (F-1/M-1)</option>
+                  <option value="work">Work Visa (H-1B, L-1, etc.)</option>
+                  <option value="family">Family Visa</option>
+                  <option value="other">Other/Not Sure</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message (Optional)</label>
+                <textarea id="message" placeholder="Tell us about your visa needs"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Request Consultation</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <div class="footer-logo">
+              <span class="logo-text">VisaPath<span class="logo-highlight">USA</span></span>
+            </div>
+            <p>Your trusted partner for US visa success since 2013. We've helped over 5,000 clients achieve their American dreams.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#cities">Destinations</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul class="contact-info">
+              <li><i class="fas fa-map-marker-alt"></i> 123 Visa Street, Suite 101<br>Miami, FL 33101</li>
+              <li><i class="fas fa-phone"></i> (305) 555-7890</li>
+              <li><i class="fas fa-envelope"></i> info@visapathusa.com</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Office Hours</h3>
+            <ul class="office-hours">
+              <li><span>Monday - Friday:</span> 9:00 AM - 6:00 PM</li>
+              <li><span>Saturday:</span> 10:00 AM - 2:00 PM</li>
+              <li><span>Sunday:</span> Closed</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 VisaPathUSA. All rights reserved.</p>
+          <ul class="legal-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#hero" class="back-to-top" id="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <div id="success-message" class="success-message">
+      <div class="success-content">
+        <i class="fas fa-check-circle"></i>
+        <h3>Thank You!</h3>
+        <p>Your consultation request has been submitted. We'll contact you within 24 hours.</p>
+        <button id="close-success" class="btn btn-primary">Close</button>
+      </div>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
