@@ -25,7 +25,8 @@ export function setupCities() {
     {
       name: "Chicago",
       // image: "https://images.pexels.com/photos/2148516/pexels-photo-2148516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      image: "https://images.pexels.com/photos/1823681/pexels-photo-1823681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      // image: "https://images.pexels.com/photos/1823681/pexels-photo-1823681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      image: "../images/chicago.jpeg",
       description: "Visit the Windy City with its stunning architecture, deep-dish pizza, and lakefront attractions.",
       highlights: ["Millennium Park", "Navy Pier", "Art Institute", "Willis Tower"]
     },
