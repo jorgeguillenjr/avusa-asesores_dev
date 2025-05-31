@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupFaq();
   
   // Setup contact form
-  setupForm();
+  // setupForm();
   
   // Setup back to top button
   setupScrollTop();
