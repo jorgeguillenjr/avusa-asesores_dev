@@ -12,7 +12,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
-  align-items: center;
+  align-items: left;
 }
 
 .consultation-content h2 {
