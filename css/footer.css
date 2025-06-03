@@ -107,7 +107,7 @@ footer {
 }
 
 .legal-links {
-  display: flex;
+  /* display: flex; */
   gap: 24px;
   flex-wrap: wrap;
 }

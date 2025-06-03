@@ -22,3 +22,20 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+
+document.getElementById("openDisclaimer").addEventListener("click", function(e) {
+    e.preventDefault();
+    document.getElementById("disclaimerModal").style.display = "block";
+  });
+
+  document.getElementById("closeDisclaimer").addEventListener("click", function() {
+    document.getElementById("disclaimerModal").style.display = "none";
+  });
+
+  // Cerrar si se hace clic fuera del contenido
+  window.onclick = function(event) {
+    let modal = document.getElementById("disclaimerModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
