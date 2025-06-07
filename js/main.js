@@ -4,6 +4,7 @@ import { setupTestimonials } from './modules/testimonials.js';
 import { setupFaq } from './modules/faq.js';
 import { setupForm } from './modules/form.js';
 import { setupScrollTop } from './modules/scrollTop.js';
+import { setupDisclaimer } from './modules/disclaimer.js';
 
 // Initialize all modules when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,8 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
   setupFaq();
   
   // Setup contact form
-  // setupForm();
+  setupForm();
   
   // Setup back to top button
   setupScrollTop();
+  
+  // Setup disclaimer modal
+  setupDisclaimer();
 });
