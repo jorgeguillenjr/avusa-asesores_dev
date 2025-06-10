@@ -50,12 +50,43 @@ footer {
   justify-content: center;
   color: var(--gray-300);
   transition: var(--transition);
+  position: relative;
 }
 
 .social-links a:hover {
   background-color: var(--secondary-color);
   color: var(--gray-900);
   transform: translateY(-4px);
+}
+
+/* WhatsApp specific styling */
+.social-links a[href*="wa.me"]:hover {
+  background-color: #25D366;
+  color: var(--white);
+}
+
+/* Add tooltip for social links */
+.social-links a::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--gray-800);
+  color: var(--white);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  pointer-events: none;
+}
+
+.social-links a:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .footer-links li {
@@ -82,6 +113,20 @@ footer {
   margin-right: 12px;
   color: var(--secondary-color);
   margin-top: 4px;
+  min-width: 16px;
+}
+
+.contact-info a {
+  transition: var(--transition);
+}
+
+.contact-info a:hover {
+  color: var(--secondary-color);
+}
+
+/* WhatsApp link in contact info */
+.contact-info a[href*="wa.me"]:hover {
+  color: #25D366;
 }
 
 .office-hours li {
@@ -134,5 +179,13 @@ footer {
   
   .legal-links {
     justify-content: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .contact-info li {
+    align-items: flex-start;
   }
 }
