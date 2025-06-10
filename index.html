@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./css/consultation.css">
     <link rel="stylesheet" href="./css/faq.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/modals.css">
   </head>
   <body>
     <header id="header">
@@ -398,13 +399,146 @@
         <div class="footer-bottom">
           <p>&copy; 2025 AV USA. Todos los derechos reservados.</p>
           <ul class="legal-links">
-            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#" id="privacy-policy-link">Política de Privacidad</a></li>
             <li><a href="#">Términos de Servicio</a></li>
             <li><a href="#">Aviso Legal</a></li>
           </ul>
         </div>
       </div>
     </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyPolicyModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2><i class="fas fa-shield-alt"></i> Política de Privacidad</h2>
+          <span class="modal-close" id="closePrivacyModal">&times;</span>
+        </div>
+        <div class="modal-body">
+          <div class="privacy-content">
+            <div class="privacy-section">
+              <h3>1. Información que Recopilamos</h3>
+              <p>En AV USA, recopilamos información personal que usted nos proporciona voluntariamente cuando:</p>
+              <ul>
+                <li>Solicita nuestros servicios de asesoría de visa</li>
+                <li>Completa formularios de consulta en nuestro sitio web</li>
+                <li>Se comunica con nosotros por teléfono, correo electrónico o WhatsApp</li>
+                <li>Participa en consultas o reuniones</li>
+              </ul>
+              <p>La información que podemos recopilar incluye:</p>
+              <ul>
+                <li>Nombre completo</li>
+                <li>Información de contacto (dirección, teléfono, correo electrónico)</li>
+                <li>Información de pasaporte y documentos de identidad</li>
+                <li>Información financiera relevante para la solicitud de visa</li>
+                <li>Historial de viajes</li>
+                <li>Información educativa y laboral</li>
+              </ul>
+            </div>
+
+            <div class="privacy-section">
+              <h3>2. Cómo Utilizamos su Información</h3>
+              <p>Utilizamos la información recopilada para:</p>
+              <ul>
+                <li>Proporcionar servicios de asesoría de visa personalizados</li>
+                <li>Preparar y revisar documentos de solicitud de visa</li>
+                <li>Comunicarnos con usted sobre su caso</li>
+                <li>Programar citas y consultas</li>
+                <li>Cumplir con requisitos legales y regulatorios</li>
+                <li>Mejorar nuestros servicios</li>
+              </ul>
+            </div>
+
+            <div class="privacy-section">
+              <h3>3. Compartir Información</h3>
+              <p>No vendemos, alquilamos ni compartimos su información personal con terceros, excepto:</p>
+              <ul>
+                <li>Cuando sea necesario para procesar su solicitud de visa</li>
+                <li>Con autoridades gubernamentales cuando sea requerido por ley</li>
+                <li>Con proveedores de servicios que nos ayudan a operar nuestro negocio (bajo estrictos acuerdos de confidencialidad)</li>
+                <li>Cuando usted nos dé su consentimiento explícito</li>
+              </ul>
+            </div>
+
+            <div class="privacy-section">
+              <h3>4. Seguridad de la Información</h3>
+              <p>Implementamos medidas de seguridad apropiadas para proteger su información personal contra acceso no autorizado, alteración, divulgación o destrucción. Estas medidas incluyen:</p>
+              <ul>
+                <li>Cifrado de datos sensibles</li>
+                <li>Acceso restringido a información personal</li>
+                <li>Capacitación regular del personal sobre privacidad y seguridad</li>
+                <li>Revisiones periódicas de nuestras prácticas de seguridad</li>
+              </ul>
+            </div>
+
+            <div class="privacy-section">
+              <h3>5. Retención de Datos</h3>
+              <p>Conservamos su información personal durante el tiempo necesario para:</p>
+              <ul>
+                <li>Proporcionar nuestros servicios</li>
+                <li>Cumplir con obligaciones legales</li>
+                <li>Resolver disputas</li>
+                <li>Hacer cumplir nuestros acuerdos</li>
+              </ul>
+              <p>Generalmente, conservamos los registros de clientes durante un período de 7 años después de la finalización de nuestros servicios.</p>
+            </div>
+
+            <div class="privacy-section">
+              <h3>6. Sus Derechos</h3>
+              <p>Usted tiene derecho a:</p>
+              <ul>
+                <li>Acceder a la información personal que tenemos sobre usted</li>
+                <li>Solicitar correcciones a información inexacta</li>
+                <li>Solicitar la eliminación de su información personal (sujeto a obligaciones legales)</li>
+                <li>Retirar su consentimiento para el procesamiento de datos</li>
+                <li>Presentar una queja ante las autoridades de protección de datos</li>
+              </ul>
+            </div>
+
+            <div class="privacy-section">
+              <h3>7. Cookies y Tecnologías de Seguimiento</h3>
+              <p>Nuestro sitio web puede utilizar cookies y tecnologías similares para:</p>
+              <ul>
+                <li>Mejorar la funcionalidad del sitio web</li>
+                <li>Analizar el uso del sitio web</li>
+                <li>Personalizar su experiencia</li>
+              </ul>
+              <p>Puede configurar su navegador para rechazar cookies, aunque esto puede afectar la funcionalidad del sitio.</p>
+            </div>
+
+            <div class="privacy-section">
+              <h3>8. Menores de Edad</h3>
+              <p>Nuestros servicios no están dirigidos a menores de 18 años. No recopilamos intencionalmente información personal de menores sin el consentimiento de los padres o tutores.</p>
+            </div>
+
+            <div class="privacy-section">
+              <h3>9. Cambios a esta Política</h3>
+              <p>Podemos actualizar esta Política de Privacidad ocasionalmente. Le notificaremos sobre cambios significativos publicando la nueva política en nuestro sitio web y actualizando la fecha de "última actualización".</p>
+            </div>
+
+            <div class="privacy-section">
+              <h3>10. Contacto</h3>
+              <p>Si tiene preguntas sobre esta Política de Privacidad o sobre cómo manejamos su información personal, contáctenos:</p>
+              <div class="contact-details">
+                <p><strong>AV USA</strong></p>
+                <p><i class="fas fa-map-marker-alt"></i> Colonia John F. Kennedy, Tegucigalpa, Honduras 11101</p>
+                <p><i class="fas fa-phone"></i> (504) 8800-8472</p>
+                <p><i class="fas fa-envelope"></i> avusahn@gmail.com</p>
+                <p><i class="fab fa-whatsapp"></i> WhatsApp: +504 8800-8472</p>
+              </div>
+            </div>
+
+            <div class="privacy-footer">
+              <p><strong>Última actualización:</strong> Enero 2025</p>
+              <p><em>Esta política se rige por las leyes de Honduras y las mejores prácticas internacionales de protección de datos.</em></p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" id="acceptPrivacyPolicy">Entendido</button>
+        </div>
+      </div>
+    </div>
 
     <div id="disclaimerModal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color: rgba(0,0,0,0.5);">
       <div style="background-color: #fff; margin: 10% auto; padding: 20px; border-radius: 8px; width: 90%; max-width: 600px; font-family: Arial, sans-serif;">

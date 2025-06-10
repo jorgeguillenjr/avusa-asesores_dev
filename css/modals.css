@@ -1,0 +1,280 @@
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: var(--white);
+  margin: 2% auto;
+  border-radius: var(--border-radius-lg);
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--gray-800));
+  color: var(--white);
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal-header i {
+  color: var(--secondary-color);
+}
+
+.modal-close {
+  color: var(--white);
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.modal-close:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.modal-body {
+  padding: 0;
+  overflow-y: auto;
+  flex: 1;
+  max-height: calc(90vh - 160px);
+}
+
+.privacy-content {
+  padding: 32px;
+  line-height: 1.7;
+}
+
+.privacy-section {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.privacy-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.privacy-section h3 {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--secondary-color);
+  display: inline-block;
+}
+
+.privacy-section p {
+  color: var(--gray-700);
+  margin-bottom: 16px;
+  text-align: justify;
+}
+
+.privacy-section ul {
+  margin: 16px 0;
+  padding-left: 0;
+}
+
+.privacy-section li {
+  color: var(--gray-700);
+  margin-bottom: 8px;
+  padding-left: 24px;
+  position: relative;
+  list-style: none;
+}
+
+.privacy-section li::before {
+  content: '•';
+  color: var(--secondary-color);
+  font-weight: bold;
+  position: absolute;
+  left: 8px;
+}
+
+.contact-details {
+  background-color: var(--gray-50);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--secondary-color);
+  margin: 16px 0;
+}
+
+.contact-details p {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-details i {
+  color: var(--primary-color);
+  width: 16px;
+}
+
+.privacy-footer {
+  background-color: var(--gray-100);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin-top: 24px;
+  text-align: center;
+}
+
+.privacy-footer p {
+  margin-bottom: 8px;
+  color: var(--gray-600);
+}
+
+.privacy-footer em {
+  color: var(--gray-500);
+  font-size: 0.9rem;
+}
+
+.modal-footer {
+  background-color: var(--gray-50);
+  padding: 20px 32px;
+  border-top: 1px solid var(--gray-200);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.modal-footer .btn {
+  min-width: 120px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    margin: 5% auto;
+    max-height: 95vh;
+  }
+  
+  .modal-header {
+    padding: 20px;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.25rem;
+  }
+  
+  .privacy-content {
+    padding: 20px;
+  }
+  
+  .privacy-section h3 {
+    font-size: 1.125rem;
+  }
+  
+  .modal-footer {
+    padding: 16px 20px;
+  }
+  
+  .modal-body {
+    max-height: calc(95vh - 140px);
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 98%;
+    margin: 1% auto;
+    max-height: 98vh;
+  }
+  
+  .modal-header {
+    padding: 16px;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.125rem;
+  }
+  
+  .privacy-content {
+    padding: 16px;
+  }
+  
+  .privacy-section {
+    margin-bottom: 24px;
+  }
+  
+  .contact-details {
+    padding: 16px;
+  }
+  
+  .modal-footer {
+    padding: 12px 16px;
+  }
+  
+  .modal-body {
+    max-height: calc(98vh - 120px);
+  }
+}
+
+/* Scrollbar Styling for Modal Body */
+.modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: var(--gray-100);
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: var(--gray-400);
+  border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-500);
+}
