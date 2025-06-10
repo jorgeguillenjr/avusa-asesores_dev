@@ -5,7 +5,7 @@ import { setupFaq } from './modules/faq.js';
 import { setupForm } from './modules/form.js';
 import { setupScrollTop } from './modules/scrollTop.js';
 import { setupDisclaimer } from './modules/disclaimer.js';
-import { setupPrivacyModal } from './modules/privacyModal.js';
+import { setupPrivacyModal } from './modules/modals.js';
 
 // Initialize all modules when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
