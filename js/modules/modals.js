@@ -11,21 +11,21 @@ export function setupPrivacyModal() {
   if (privacyPolicyLink) {
     privacyPolicyLink.addEventListener('click', (e) => {
       e.preventDefault();
-      showModal();
+      showPrivacyModal();
     });
   }
   
   // Close modal when X button is clicked
   if (closePrivacyModal) {
     closePrivacyModal.addEventListener('click', () => {
-      hideModal();
+      hidePrivacyModal();
     });
   }
   
   // Close modal when "Entendido" button is clicked
   if (acceptPrivacyPolicy) {
     acceptPrivacyPolicy.addEventListener('click', () => {
-      hideModal();
+      hidePrivacyModal();
     });
   }
   
@@ -33,7 +33,7 @@ export function setupPrivacyModal() {
   if (privacyPolicyModal) {
     privacyPolicyModal.addEventListener('click', (e) => {
       if (e.target === privacyPolicyModal) {
-        hideModal();
+        hidePrivacyModal();
       }
     });
   }
@@ -41,12 +41,11 @@ export function setupPrivacyModal() {
   // Close modal with Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && privacyPolicyModal && privacyPolicyModal.style.display === 'flex') {
-      hideModal();
+      hidePrivacyModal();
     }
   });
   
-  function showModal() {
-    console.log(privacyPolicyModal)
+  function showPrivacyModal() {
     if (privacyPolicyModal) {
       privacyPolicyModal.style.display = 'flex';
       privacyPolicyModal.classList.add('show');
@@ -60,7 +59,7 @@ export function setupPrivacyModal() {
     }
   }
   
-  function hideModal() {
+  function hidePrivacyModal() {
     if (privacyPolicyModal) {
       privacyPolicyModal.classList.remove('show');
       
@@ -73,7 +72,7 @@ export function setupPrivacyModal() {
   }
   
   // Trap focus within modal when it's open
-  function trapFocus(e) {
+  function trapPrivacyFocus(e) {
     if (privacyPolicyModal && privacyPolicyModal.style.display === 'flex') {
       const focusableElements = privacyPolicyModal.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
@@ -97,37 +96,37 @@ export function setupPrivacyModal() {
     }
   }
   
-  document.addEventListener('keydown', trapFocus);
+  document.addEventListener('keydown', trapPrivacyFocus);
 }
-/******************************************************************************************************************************************************************************************/
+
 /**
  * Setup service terms modal functionality
  */
 export function setupServiceModal() {
   const serviceTermsLink = document.getElementById('service-terms-link');
   const serviceTermsModal = document.getElementById('serviceTermsModal');
-  const closeServiceTermsModal = document.getElementById('closeserviceTermsModal');
-  const acceptServiceTerms = document.getElementById('acceptserviceTerms');
+  const closeServiceTermsModal = document.getElementById('closeServiceTermsModal');
+  const acceptServiceTerms = document.getElementById('acceptServiceTerms');
   
-  // Open modal when privacy policy link is clicked
+  // Open modal when service terms link is clicked
   if (serviceTermsLink) {
     serviceTermsLink.addEventListener('click', (e) => {
       e.preventDefault();
-      showModal();
+      showServiceModal();
     });
   }
   
   // Close modal when X button is clicked
   if (closeServiceTermsModal) {
     closeServiceTermsModal.addEventListener('click', () => {
-      hideModal();
+      hideServiceModal();
     });
   }
   
   // Close modal when "Entendido" button is clicked
   if (acceptServiceTerms) {
     acceptServiceTerms.addEventListener('click', () => {
-      hideModal();
+      hideServiceModal();
     });
   }
   
@@ -135,7 +134,7 @@ export function setupServiceModal() {
   if (serviceTermsModal) {
     serviceTermsModal.addEventListener('click', (e) => {
       if (e.target === serviceTermsModal) {
-        hideModal();
+        hideServiceModal();
       }
     });
   }
@@ -143,11 +142,11 @@ export function setupServiceModal() {
   // Close modal with Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && serviceTermsModal && serviceTermsModal.style.display === 'flex') {
-      hideModal();
+      hideServiceModal();
     }
   });
   
-  function showModal() {
+  function showServiceModal() {
     if (serviceTermsModal) {
       serviceTermsModal.style.display = 'flex';
       serviceTermsModal.classList.add('show');
@@ -161,7 +160,7 @@ export function setupServiceModal() {
     }
   }
   
-  function hideModal() {
+  function hideServiceModal() {
     if (serviceTermsModal) {
       serviceTermsModal.classList.remove('show');
       
@@ -174,7 +173,7 @@ export function setupServiceModal() {
   }
   
   // Trap focus within modal when it's open
-  function trapFocus(e) {
+  function trapServiceFocus(e) {
     if (serviceTermsModal && serviceTermsModal.style.display === 'flex') {
       const focusableElements = serviceTermsModal.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
@@ -198,5 +197,5 @@ export function setupServiceModal() {
     }
   }
   
-  document.addEventListener('keydown', trapFocus);
+  document.addEventListener('keydown', trapServiceFocus);
 }
