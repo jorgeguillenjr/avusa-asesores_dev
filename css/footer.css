@@ -62,6 +62,7 @@ footer {
 /* WhatsApp specific styling */
 .social-links a[href*="wa.me"]:hover {
   background-color: #25D366;
+  /* background-color: rgba(255, 255, 255, 0.1); */
   color: var(--white);
 }
 

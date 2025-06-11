@@ -46,6 +46,7 @@ export function setupPrivacyModal() {
   });
   
   function showModal() {
+    console.log(privacyPolicyModal)
     if (privacyPolicyModal) {
       privacyPolicyModal.style.display = 'flex';
       privacyPolicyModal.classList.add('show');
