@@ -401,7 +401,7 @@
           <ul class="legal-links">
             <li><a href="#" id="privacy-policy-link">Política de Privacidad</a></li>
             <li><a href="#" id="service-terms-link">Términos de Servicio</a></li>
-            <li><a href="#">Aviso Legal</a></li>
+            <li><a href="#" id="legal-notice-link">Aviso Legal</a></li>
           </ul>
         </div>
       </div>
@@ -634,7 +634,105 @@
           <button class="btn btn-primary" id="acceptServiceTerms">Entendido</button>
         </div> 
       </div>
-    </div> 
+    </div>
+
+    <!-- Legal Notice Modal -->
+    <div id="legalNoticeModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2><i class="fas fa-balance-scale"></i> Aviso Legal</h2>
+          <span class="modal-close" id="closeLegalNoticeModal">&times;</span>
+        </div>
+        <div class="modal-body">
+          <div class="privacy-content">
+            <div class="privacy-section">
+              <h3>Identificación de la Empresa</h3>
+              <div class="contact-details">
+                <p><strong>Razón Social:</strong> AV USA - Asesores Profesionales</p>
+                <p><strong>Actividad:</strong> Servicios de asesoría para trámites de visa americana</p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Colonia John F. Kennedy, Tegucigalpa, Honduras 11101</p>
+                <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> (504) 8800-8472</p>
+                <p><i class="fas fa-envelope"></i> <strong>Correo electrónico:</strong> avusahn@gmail.com</p>
+                <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> +504 8800-8472</p>
+              </div>
+            </div>
+
+            <div class="privacy-section">
+              <h3>Naturaleza de los Servicios</h3>
+              <p style="text-align: justify;"><strong>AV USA - Asesores Profesionales</strong> es una empresa privada de asesoría especializada en procesos de solicitud de visa americana. <strong>NO somos una entidad gubernamental, ni estamos afiliados, asociados o respaldados por el Gobierno de los Estados Unidos, el Departamento de Estado de EE.UU., ni ninguna de sus agencias.</strong></p>
+              
+              <p style="text-align: justify;">Nuestros servicios incluyen:</p>
+              <ul>
+                <li>Asesoría y orientación en procesos de solicitud de visa</li>
+                <li>Asistencia en la preparación de documentos</li>
+                <li>Orientación para entrevistas consulares</li>
+                <li>Información sobre requisitos y procedimientos</li>
+              </ul>
+            </div>
+
+            <div class="privacy-section">
+              <h3>Limitaciones y Responsabilidades</h3>
+              <p style="text-align: justify;"><strong>IMPORTANTE:</strong> AV USA no puede garantizar la aprobación de ninguna solicitud de visa. La decisión final sobre la aprobación o denegación de visas es responsabilidad exclusiva del Gobierno de los Estados Unidos y sus oficiales consulares.</p>
+              
+              <p style="text-align: justify;">Nuestros servicios son de carácter informativo y de asesoría. No procesamos ni tramitamos directamente las visas ante las autoridades estadounidenses.</p>
+              
+              <p style="text-align: justify;">La empresa no se hace responsable por:</p>
+              <ul>
+                <li>Decisiones tomadas por el consulado o embajada de EE.UU.</li>
+                <li>Cambios en las políticas migratorias estadounidenses</li>
+                <li>Información incorrecta o incompleta proporcionada por el cliente</li>
+                <li>Retrasos en los procesos consulares</li>
+              </ul>
+            </div>
+
+            <div class="privacy-section">
+              <h3>Propiedad Intelectual</h3>
+              <p style="text-align: justify;">Todo el contenido de este sitio web, incluyendo pero no limitado a textos, gráficos, logotipos, iconos, imágenes, clips de audio, descargas digitales, compilaciones de datos y software, es propiedad de AV USA o de sus proveedores de contenido y está protegido por las leyes de propiedad intelectual de Honduras e internacionales.</p>
+              
+              <p style="text-align: justify;">Está prohibida la reproducción, distribución, modificación o uso comercial del contenido sin autorización expresa por escrito.</p>
+            </div>
+
+            <div class="privacy-section">
+              <h3>Información Oficial</h3>
+              <p style="text-align: justify;">Para información oficial sobre visas estadounidenses, requisitos actualizados y procedimientos oficiales, recomendamos consultar directamente:</p>
+              <ul>
+                <li><strong>Sitio web oficial del Departamento de Estado:</strong> <a href="https://travel.state.gov" target="_blank" style="color: var(--primary-color);">https://travel.state.gov</a></li>
+                <li><strong>Embajada de EE.UU. en Honduras:</strong> <a href="https://hn.usembassy.gov" target="_blank" style="color: var(--primary-color);">https://hn.usembassy.gov</a></li>
+                <li><strong>Centro Nacional de Visas (NVC):</strong> <a href="https://nvc.state.gov" target="_blank" style="color: var(--primary-color);">https://nvc.state.gov</a></li>
+              </ul>
+            </div>
+
+            <div class="privacy-section">
+              <h3>Legislación Aplicable</h3>
+              <p style="text-align: justify;">Este aviso legal se rige por la legislación de Honduras. Cualquier controversia que pudiera derivarse del acceso o uso de este sitio web será sometida a la jurisdicción de los tribunales competentes de Tegucigalpa, Honduras.</p>
+            </div>
+
+            <div class="privacy-section">
+              <h3>Modificaciones</h3>
+              <p style="text-align: justify;">AV USA se reserva el derecho de modificar este aviso legal en cualquier momento. Las modificaciones entrarán en vigor desde el momento de su publicación en el sitio web.</p>
+            </div>
+
+            <div class="privacy-section">
+              <h3>Contacto Legal</h3>
+              <p style="text-align: justify;">Para cualquier consulta legal relacionada con este aviso o con nuestros servicios, puede contactarnos a través de:</p>
+              <div class="contact-details">
+                <p><i class="fas fa-envelope"></i> <strong>Correo legal:</strong> avusahn@gmail.com</p>
+                <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> (504) 8800-8472</p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Dirección postal:</strong> Colonia John F. Kennedy, Tegucigalpa, Honduras 11101</p>
+              </div>
+            </div>
+
+            <div class="privacy-footer">
+              <p><strong>Última actualización:</strong> Enero 2025</p>
+              <p><em>Este aviso legal se rige por las leyes de Honduras y las normativas internacionales aplicables.</em></p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" id="acceptLegalNotice">Entendido</button>
+        </div>
+      </div>
+    </div>
 
     <div id="disclaimerModal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color: rgba(0,0,0,0.5);">
       <div style="background-color: #fff; margin: 10% auto; padding: 20px; border-radius: 8px; width: 90%; max-width: 600px; font-family: Arial, sans-serif;">

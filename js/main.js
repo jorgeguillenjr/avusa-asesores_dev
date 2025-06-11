@@ -5,7 +5,7 @@ import { setupFaq } from './modules/faq.js';
 import { setupForm } from './modules/form.js';
 import { setupScrollTop } from './modules/scrollTop.js';
 import { setupDisclaimer } from './modules/disclaimer.js';
-import { setupPrivacyModal, setupServiceModal } from './modules/modals.js';
+import { setupPrivacyModal, setupServiceModal, setupLegalNoticeModal } from './modules/modals.js';
 
 // Initialize all modules when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -35,4 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Setup service terms modal
   setupServiceModal();
+  
+  // Setup legal notice modal
+  setupLegalNoticeModal();
 });

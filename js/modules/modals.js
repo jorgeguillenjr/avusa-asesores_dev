@@ -199,3 +199,104 @@ export function setupServiceModal() {
   
   document.addEventListener('keydown', trapServiceFocus);
 }
+
+/**
+ * Setup legal notice modal functionality
+ */
+export function setupLegalNoticeModal() {
+  const legalNoticeLink = document.getElementById('legal-notice-link');
+  const legalNoticeModal = document.getElementById('legalNoticeModal');
+  const closeLegalNoticeModal = document.getElementById('closeLegalNoticeModal');
+  const acceptLegalNotice = document.getElementById('acceptLegalNotice');
+  
+  // Open modal when legal notice link is clicked
+  if (legalNoticeLink) {
+    legalNoticeLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      showLegalNoticeModal();
+    });
+  }
+  
+  // Close modal when X button is clicked
+  if (closeLegalNoticeModal) {
+    closeLegalNoticeModal.addEventListener('click', () => {
+      hideLegalNoticeModal();
+    });
+  }
+  
+  // Close modal when "Entendido" button is clicked
+  if (acceptLegalNotice) {
+    acceptLegalNotice.addEventListener('click', () => {
+      hideLegalNoticeModal();
+    });
+  }
+  
+  // Close modal when clicking outside the modal content
+  if (legalNoticeModal) {
+    legalNoticeModal.addEventListener('click', (e) => {
+      if (e.target === legalNoticeModal) {
+        hideLegalNoticeModal();
+      }
+    });
+  }
+  
+  // Close modal with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && legalNoticeModal && legalNoticeModal.style.display === 'flex') {
+      hideLegalNoticeModal();
+    }
+  });
+  
+  function showLegalNoticeModal() {
+    if (legalNoticeModal) {
+      legalNoticeModal.style.display = 'flex';
+      legalNoticeModal.classList.add('show');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      
+      // Focus management for accessibility
+      const firstFocusableElement = legalNoticeModal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+      if (firstFocusableElement) {
+        firstFocusableElement.focus();
+      }
+    }
+  }
+  
+  function hideLegalNoticeModal() {
+    if (legalNoticeModal) {
+      legalNoticeModal.classList.remove('show');
+      
+      // Add a small delay before hiding to allow animation to complete
+      setTimeout(() => {
+        legalNoticeModal.style.display = 'none';
+        document.body.style.overflow = ''; // Restore background scrolling
+      }, 300);
+    }
+  }
+  
+  // Trap focus within modal when it's open
+  function trapLegalNoticeFocus(e) {
+    if (legalNoticeModal && legalNoticeModal.style.display === 'flex') {
+      const focusableElements = legalNoticeModal.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
+      
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            lastElement.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            firstElement.focus();
+            e.preventDefault();
+          }
+        }
+      }
+    }
+  }
+  
+  document.addEventListener('keydown', trapLegalNoticeFocus);
+}
