@@ -7,7 +7,7 @@ export function setupPrivacyModal() {
   const closePrivacyModal = document.getElementById('closePrivacyModal');
   const acceptPrivacyPolicy = document.getElementById('acceptPrivacyPolicy');
   
-  // Open modal when privacy policy link is clicked
+  // Open modal when privacy policy link is clicke
   if (privacyPolicyLink) {
     privacyPolicyLink.addEventListener('click', (e) => {
       e.preventDefault();
