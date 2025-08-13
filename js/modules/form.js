@@ -1,7 +1,12 @@
+import emailjs from '@emailjs/browser';
+
 /**
- * Setup contact form functionality with email sending
+ * Setup contact form functionality with EmailJS
  */
 export function setupForm() {
+  // Initialize EmailJS with your public key
+  emailjs.init('QVUd0vIqQZqQxeFx9');
+  
   const contactForm = document.getElementById('contact-form');
   const successMessage = document.getElementById('success-message');
   const closeSuccess = document.getElementById('close-success');
@@ -36,23 +41,29 @@ export function setupForm() {
       submitButton.disabled = true;
       
       try {
-        // Send email using Formspree (primary method)
-        const formData = new FormData(contactForm);
+        // Prepare template parameters for EmailJS
+        const templateParams = {
+          from_name: name,
+          from_email: email,
+          phone: phone,
+          visa_type: visaType,
+          message: message || 'Sin mensaje adicional',
+          to_email: 'info@avusa-asesores.com'
+        };
         
-        const response = await fetch('https://formspree.io/f/mldnrvlo', {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
+        // Send email using EmailJS
+        const response = await emailjs.send(
+          'default_service', // Use default service or replace with your service ID
+          'template_9xg3lee',
+          templateParams
+        );
         
-        if (response.ok) {
+        if (response.status === 200) {
           // Success - reset form and show success message
           contactForm.reset();
           successMessage.classList.add('visible');
           
-          // Send confirmation email to client (optional)
+          // Send confirmation email to client
           await sendConfirmationEmail(name, email, visaType);
           
         } else {
@@ -144,13 +155,27 @@ function showErrorMessage(message) {
 }
 
 /**
- * Send confirmation email to client (optional feature)
+ * Send confirmation email to client
  */
 async function sendConfirmationEmail(name, email, visaType) {
   try {
-    // This is an optional feature - you can implement this with EmailJS or another service
-    // For now, we'll just log it
-    console.log(`Confirmation email would be sent to ${email} for ${name} regarding ${visaType} visa`);
+    const confirmationParams = {
+      to_name: name,
+      to_email: email,
+      visa_type: visaType,
+      from_email: 'info@avusa-asesores.com',
+      company_name: 'AV USA - Asesores Profesionales'
+    };
+    
+    // You can create a separate template for confirmation emails
+    // For now, we'll use the same template but you should create a specific one
+    await emailjs.send(
+      'default_service',
+      'template_9xg3lee', // Consider creating a separate confirmation template
+      confirmationParams
+    );
+    
+    console.log('Confirmation email sent successfully');
   } catch (error) {
     console.error('Error sending confirmation email:', error);
     // Don't throw error here as the main form submission was successful
