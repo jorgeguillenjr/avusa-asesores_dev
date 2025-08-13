@@ -53,7 +53,7 @@ export function setupForm() {
         
         // Send email using EmailJS
         const response = await emailjs.send(
-          'default_service', // Use default service or replace with your service ID
+          'service_ixh3pbf', // Use default service or replace with your service ID
           'template_9xg3lee',
           templateParams
         );
@@ -170,7 +170,7 @@ async function sendConfirmationEmail(name, email, visaType) {
     // You can create a separate template for confirmation emails
     // For now, we'll use the same template but you should create a specific one
     await emailjs.send(
-      'default_service',
+      'service_ixh3pbf',
       'template_9xg3lee', // Consider creating a separate confirmation template
       confirmationParams
     );
