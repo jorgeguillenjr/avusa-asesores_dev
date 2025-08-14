@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('../images/wing-plane-flying-airplane-62623.jpeg');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('./images/wing-plane-flying-airplane-62623.jpeg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

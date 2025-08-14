@@ -48,31 +48,45 @@ export function setupForm() {
           phone: phone,
           visa_type: visaType,
           message: message || 'Sin mensaje adicional',
-          to_email: 'info@avusa-asesores.com'
+          to_email: 'info@avusa-asesores.com',
+          reply_to: email
         };
+        
+        console.log('Enviando correo con parámetros:', templateParams);
         
         // Send email using EmailJS
         const response = await emailjs.send(
-          'service_ixh3pbf', // Use default service or replace with your service ID
-          'template_9xg3lee',
+          'default_service', // Usar servicio por defecto
+          'template_9xg3lee', // Tu template ID
           templateParams
         );
+        
+        console.log('Respuesta de EmailJS:', response);
         
         if (response.status === 200) {
           // Success - reset form and show success message
           contactForm.reset();
           successMessage.classList.add('visible');
-          
-          // Send confirmation email to client
-          await sendConfirmationEmail(name, email, visaType);
-          
+          console.log('Correo enviado exitosamente');
         } else {
           throw new Error('Error en el envío del formulario');
         }
         
       } catch (error) {
-        console.error('Error sending email:', error);
-        showErrorMessage('Hubo un error al enviar su consulta. Por favor, intente nuevamente o contáctenos directamente.');
+        console.error('Error detallado al enviar email:', error);
+        
+        // Mostrar error más específico
+        let errorMessage = 'Hubo un error al enviar su consulta. ';
+        
+        if (error.text) {
+          errorMessage += `Detalles: ${error.text}`;
+        } else if (error.message) {
+          errorMessage += `Detalles: ${error.message}`;
+        } else {
+          errorMessage += 'Por favor, intente nuevamente o contáctenos directamente por WhatsApp.';
+        }
+        
+        showErrorMessage(errorMessage);
       } finally {
         // Reset button state
         submitButton.textContent = originalText;
@@ -143,7 +157,7 @@ function showErrorMessage(message) {
     errorElement.style.transform = 'translateX(0)';
   }, 100);
   
-  // Hide after 5 seconds
+  // Hide after 8 seconds for longer error messages
   setTimeout(() => {
     errorElement.style.transform = 'translateX(100%)';
     setTimeout(() => {
@@ -151,33 +165,5 @@ function showErrorMessage(message) {
         errorElement.parentNode.removeChild(errorElement);
       }
     }, 300);
-  }, 5000);
-}
-
-/**
- * Send confirmation email to client
- */
-async function sendConfirmationEmail(name, email, visaType) {
-  try {
-    const confirmationParams = {
-      to_name: name,
-      to_email: email,
-      visa_type: visaType,
-      from_email: 'info@avusa-asesores.com',
-      company_name: 'AV USA - Asesores Profesionales'
-    };
-    
-    // You can create a separate template for confirmation emails
-    // For now, we'll use the same template but you should create a specific one
-    await emailjs.send(
-      'service_ixh3pbf',
-      'template_9xg3lee', // Consider creating a separate confirmation template
-      confirmationParams
-    );
-    
-    console.log('Confirmation email sent successfully');
-  } catch (error) {
-    console.error('Error sending confirmation email:', error);
-    // Don't throw error here as the main form submission was successful
-  }
+  }, 8000);
 }

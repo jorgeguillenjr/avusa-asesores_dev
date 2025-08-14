@@ -6,37 +6,37 @@ export function setupCities() {
   const citiesData = [
     {
       name: "Nueva York",
-      image: "../images/nuevayork.jpeg",
+      image: "./images/nuevayork.jpeg",
       description: "Experimenta la vibrante energía de la Gran Manzana con su icónico horizonte, espectáculos de Broadway y diversos vecindarios.",
       highlights: ["Estatua de la Libertad", "Central Park", "Times Square", "Broadway"]
     },
     {
       name: "San Francisco",
-      image: "../images/sanfrancisco.jpeg",
+      image: "./images/sanfrancisco.jpeg",
       description: "Descubre el encanto de la Bahía con sus colinas, tranvías y el magnífico Puente Golden Gate.",
       highlights: ["Puente Golden Gate", "Isla Alcatraz", "Fisherman's Wharf", "Barrio Chino"]
     },
     {
       name: "Los Ángeles",
-      image: "../images/losangeles.jpeg",
+      image: "./images/losangeles.jpeg",
       description: "Explora la capital del entretenimiento con Hollywood, hermosas playas y vibrantes escenas culturales.",
       highlights: ["Letrero de Hollywood", "Playa Venice", "Universal Studios", "Beverly Hills"]
     },
     {
       name: "Chicago",
-      image: "../images/chicago.jpeg",
+      image: "./images/chicago.jpeg",
       description: "Visita la Ciudad de los Vientos con su impresionante arquitectura, pizza estilo Chicago y atracciones junto al lago.",
       highlights: ["Millennium Park", "Navy Pier", "Instituto de Arte", "Torre Willis"]
     },
     {
       name: "Miami",
-      image: "../images/miami.jpeg",
+      image: "./images/miami.jpeg",
       description: "Disfruta del paraíso tropical con playas prístinas, vida nocturna vibrante y única mezcla cultural.",
       highlights: ["South Beach", "Distrito Art Deco", "Pequeña Habana", "Everglades"]
     },
     {
       name: "Las Vegas",
-      image: "../images/lasvegas.jpeg",
+      image: "./images/lasvegas.jpeg",
       description: "Experimenta la Capital Mundial del Entretenimiento con sus espectaculares shows y lujosos resorts.",
       highlights: ["The Strip", "Calle Fremont", "Tours al Gran Cañón", "Shows de Clase Mundial"]
     }
